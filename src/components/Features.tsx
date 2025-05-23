@@ -1,4 +1,3 @@
-
 import { Link, BarChart, Tags, FolderOpen, Users, Search } from "lucide-react";
 
 const mainFeatures = [
@@ -8,7 +7,6 @@ const mainFeatures = [
     description: "Effortlessly format UTM parameters—including landing page, campaign, source, medium, term, and content—by starting with a template or landing page link.",
     icon: Link,
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    reverse: false,
   },
   {
     title: "Single-click",
@@ -16,7 +14,6 @@ const mainFeatures = [
     description: "Instantly generate SVG QR codes for complete UTM-tagged destination links with a single click—ready for email, social media, web, print, and more.",
     icon: BarChart,
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    reverse: true,
   },
 ];
 
@@ -55,11 +52,18 @@ const Features = () => {
           Build, organize, and analyze your marketing campaigns with powerful UTM link management tools designed for modern marketers.
         </p>
         
-        {/* Main Features - Two Large Panels */}
-        <div className="space-y-16 mb-16">
+        {/* Main Features - Two Side-by-Side Panels */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {mainFeatures.map((feature, index) => (
-            <div key={index} className={`grid md:grid-cols-2 gap-8 items-center ${feature.reverse ? 'md:grid-flow-col-dense' : ''}`}>
-              <div className={`space-y-4 ${feature.reverse ? 'md:col-start-2' : ''}`}>
+            <div key={index} className="glass-card rounded-xl overflow-hidden">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={feature.image} 
+                  alt={feature.subtitle}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="bg-accent/10 p-3 rounded-lg">
                     <feature.icon className="w-6 h-6 text-accent" />
@@ -70,15 +74,6 @@ const Features = () => {
                   </div>
                 </div>
                 <p className="text-neutral-600 text-lg">{feature.description}</p>
-              </div>
-              <div className={`${feature.reverse ? 'md:col-start-1' : ''}`}>
-                <div className="glass-card rounded-xl overflow-hidden">
-                  <img 
-                    src={feature.image} 
-                    alt={feature.subtitle}
-                    className="w-full h-64 md:h-80 object-cover"
-                  />
-                </div>
               </div>
             </div>
           ))}
