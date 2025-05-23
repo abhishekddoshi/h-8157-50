@@ -22,6 +22,7 @@ const plans = [
     ],
     cta: "Get Started",
     popular: false,
+    comingSoon: false,
   },
   {
     name: "Pro",
@@ -39,7 +40,8 @@ const plans = [
       { name: "Team Management", included: false },
     ],
     cta: "Start Pro Trial",
-    popular: false,
+    popular: true,
+    comingSoon: false,
   },
   {
     name: "Premium",
@@ -57,7 +59,8 @@ const plans = [
       { name: "Team Management", included: false },
     ],
     cta: "Start Premium Trial",
-    popular: true,
+    popular: false,
+    comingSoon: true,
   },
   {
     name: "Teams",
@@ -74,8 +77,9 @@ const plans = [
       { name: "Custom URL", included: true },
       { name: "Team Management", included: true },
     ],
-    cta: "Contact Sales",
+    cta: "Custom Pricing",
     popular: false,
+    comingSoon: true,
   },
 ];
 
@@ -118,12 +122,20 @@ const Pricing = () => {
               key={index}
               className={`glass-card rounded-xl p-6 relative ${
                 plan.popular ? 'ring-2 ring-accent' : ''
-              }`}
+              } ${plan.comingSoon ? 'opacity-75' : ''}`}
             >
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-accent text-white px-4 py-1 rounded-full text-sm font-medium">
                     Most Popular
+                  </span>
+                </div>
+              )}
+
+              {plan.comingSoon && (
+                <div className="absolute -top-3 right-4">
+                  <span className="bg-neutral-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    Coming Soon
                   </span>
                 </div>
               )}
@@ -187,6 +199,7 @@ const Pricing = () => {
                     : 'bg-white hover:bg-neutral-50 text-neutral-900 border border-neutral-200'
                 }`}
                 variant={plan.popular ? "default" : "outline"}
+                disabled={plan.comingSoon}
               >
                 {plan.cta}
               </Button>
