@@ -1,19 +1,20 @@
+
 const stats = [
+  {
+    value: "500K+",
+    label: "Links Created",
+  },
+  {
+    value: "2M+",
+    label: "Clicks Tracked",
+  },
+  {
+    value: "10K+",
+    label: "Campaigns",
+  },
   {
     value: "99.9%",
     label: "Uptime",
-  },
-  {
-    value: "150+",
-    label: "Countries",
-  },
-  {
-    value: "$2B+",
-    label: "Processed",
-  },
-  {
-    value: "24/7",
-    label: "Support",
   },
 ];
 

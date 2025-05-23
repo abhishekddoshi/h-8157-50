@@ -1,3 +1,4 @@
+
 const Footer = () => {
   return (
     <footer className="bg-primary text-white">
@@ -6,9 +7,9 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-neutral-300 hover:text-white transition-colors">Features</a></li>
-              <li><a href="#" className="text-neutral-300 hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-neutral-300 hover:text-white transition-colors">Security</a></li>
+              <li><a href="#" className="text-neutral-300 hover:text-white transition-colors">Link Builder</a></li>
+              <li><a href="#" className="text-neutral-300 hover:text-white transition-colors">Analytics</a></li>
+              <li><a href="#" className="text-neutral-300 hover:text-white transition-colors">Integrations</a></li>
             </ul>
           </div>
           <div>
@@ -23,7 +24,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-neutral-300 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="text-neutral-300 hover:text-white transition-colors">Documentation</a></li>
+              <li><a href="#" className="text-neutral-300 hover:text-white transition-colors">UTM Guide</a></li>
               <li><a href="#" className="text-neutral-300 hover:text-white transition-colors">Support</a></li>
             </ul>
           </div>
@@ -38,7 +39,7 @@ const Footer = () => {
         </div>
         <div className="max-w-4xl mx-auto mt-12 pt-8 border-t border-neutral-800">
           <p className="text-neutral-400 text-center">
-            © 2024 Monet. All rights reserved.
+            © 2024 UTMaster. All rights reserved.
           </p>
         </div>
       </div>

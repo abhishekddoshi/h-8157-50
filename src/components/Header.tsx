@@ -1,3 +1,4 @@
+
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -8,7 +9,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-900/90 backdrop-blur-lg border-b border-neutral-800">
       <nav className="container-padding mx-auto flex h-16 items-center justify-between">
         <a href="/" className="text-xl font-semibold text-white">
-          Monet
+          UTMaster
         </a>
         
         <div className="hidden md:flex items-center gap-8">
@@ -16,13 +17,13 @@ const Header = () => {
             Features
           </a>
           <a href="#testimonials" className="text-neutral-400 hover:text-white transition-colors">
-            Testimonials
+            Success Stories
           </a>
           <a href="#pricing" className="text-neutral-400 hover:text-white transition-colors">
             Pricing
           </a>
           <button className="bg-white text-neutral-900 px-4 py-2 rounded-lg hover:bg-neutral-200 transition-colors">
-            Get Started
+            Start Free Trial
           </button>
         </div>
 
@@ -41,13 +42,13 @@ const Header = () => {
               Features
             </a>
             <a href="#testimonials" className="text-neutral-400 hover:text-white transition-colors">
-              Testimonials
+              Success Stories
             </a>
             <a href="#pricing" className="text-neutral-400 hover:text-white transition-colors">
               Pricing
             </a>
             <button className="bg-white text-neutral-900 px-4 py-2 rounded-lg hover:bg-neutral-200 transition-colors">
-              Get Started
+              Start Free Trial
             </button>
           </div>
         </div>

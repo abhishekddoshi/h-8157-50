@@ -1,18 +1,19 @@
+
 const blogPosts = [
   {
-    title: "A dynamic bank offers a few fresh moves",
+    title: "UTM Best Practices for Modern Marketing Teams",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     date: "Mar 16, 2024",
     readTime: "5 min read"
   },
   {
-    title: "The simple economy goes global",
+    title: "Campaign Attribution Made Simple",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
     date: "Mar 15, 2024",
     readTime: "3 min read"
   },
   {
-    title: "How fintech builds interactive tech stack",
+    title: "Building a Data-Driven Marketing Stack",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
     date: "Mar 14, 2024",
     readTime: "4 min read"
@@ -24,7 +25,7 @@ const Blog = () => {
     <section className="py-16 container-padding">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Learn From The Blog
+          Learn From The Marketing Blog
         </h2>
         <div className="grid md:grid-cols-3 gap-8 mt-12">
           {blogPosts.map((post, index) => (
